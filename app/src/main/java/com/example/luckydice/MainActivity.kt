@@ -11,23 +11,20 @@ class MainActivity : AppCompatActivity() {
         val FirstDice = Dice(6)
         val RollResult = FirstDice.roll()
         val luckyN = 4
-        if (RollResult == luckyN){
-            val tost = Toast.makeText(applicationContext, "You Win!",Toast.LENGTH_SHORT).show()
-        }
-        else if (RollResult == 1){
-            val tostN = Toast.makeText(applicationContext, "You lose, you rolled a 1. Try again.!",Toast.LENGTH_SHORT).show()
-        }
-        else if (RollResult == 2){
-            val tostN = Toast.makeText(applicationContext, "You lose, you rolled a 2. Try again.!",Toast.LENGTH_SHORT).show()
-        }
-        else if (RollResult == 3){
-            val tostN = Toast.makeText(applicationContext, "You lose, you rolled a 3. Try again.!",Toast.LENGTH_SHORT).show()
-        }
-        else if (RollResult == 5){
-            val tostN = Toast.makeText(applicationContext, "You lose, you rolled a 5. Try again.!",Toast.LENGTH_SHORT).show()
-        }
-        else {
-            val tostN = Toast.makeText(applicationContext, "You lose, you rolled a 6. Try again.!",Toast.LENGTH_SHORT).show()
+        val Tost  = Toast.makeText(applicationContext, "You win!",Toast.LENGTH_SHORT)
+        val Tost1  = Toast.makeText(applicationContext, "You lose, you rolled a 1",Toast.LENGTH_SHORT)
+        val Tost2  = Toast.makeText(applicationContext, "You lose, you rolled a 2",Toast.LENGTH_SHORT)
+        val Tost3  = Toast.makeText(applicationContext, "You lose, you rolled a 3",Toast.LENGTH_SHORT)
+        val Tost5  = Toast.makeText(applicationContext, "You lose, you rolled a 5",Toast.LENGTH_SHORT)
+        val Tost6  = Toast.makeText(applicationContext, "You lose, you rolled a 6",Toast.LENGTH_SHORT)
+        when (RollResult){
+            luckyN -> Tost.show()
+            1 -> Tost1.show()
+            2 -> Tost2.show()
+            3 -> Tost3.show()
+            5 -> Tost5.show()
+            6 -> Tost6.show()
+
         }
 
     }
